@@ -1,0 +1,63 @@
+     docker ps
+     docker images
+     docker pull httpd
+     docker pull mysql
+     docker images
+     docker ps -a
+     docker container create --name=c2 httpd
+     docker container create --name=c3 httpd
+     docker ps -a
+     docker start c1
+     docker ps -a
+     docker start c2
+     docker start c3
+     docker ps -a
+     docker stop c1
+     docker stop c2
+     docker ps -a
+     docker start c1
+     docker start c2
+     docker ps -a
+     docker container create --name=c4 httpd
+     docker ps -a
+     docker start c4
+     docker ps -a
+     docker stop c4
+     docker ps -a
+     docker start c4
+     docker ps -a
+     docker pause c4
+     docker ps -a
+     docker unpause c4
+     docker ps -a
+     docker stop c4
+     docker rm c4
+     docker ps -a
+     docker rm -f c3
+     docker rm -f c2
+     docker stop c1
+     docker rm c1
+     # container create  + start = run
+     docker run -d --name=c1 httpd
+     docker ps -a
+     docker images
+     docker run -d --name=c2 nginx:latest
+     docker ps
+     # inspect container - Get full docker info in json format
+     # find iP addresss by using grep
+     # login
+     docker ps
+     docker inspect c2 | less
+     docker inspect c2 | grep -i ipaddr
+     curl  "172.17.0.3"
+     clear
+     docker exec -it c1 bash
+     docker exec -it c2 bash
+     cure 172.17.0.3
+     curl 172.17.0.3
+     docker run -d --name=web1 -p 9090:80  httpd
+     docker ps
+     docker run -d --name=web1 -p 9091:80 nginx
+     docker run -d --name=web2 -p 9091:80 nginx
+     docker run -d --name=web2 -p 9092:80 kharatramesh/vadapavimages:vadapav
+     docker run -d --name=web3 -p 9092:80 kharatramesh/vadapavimages:vadapav
