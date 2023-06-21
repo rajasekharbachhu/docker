@@ -60,8 +60,6 @@
      docker ps
      docker run -d --name=web1 -p 9091:80 nginx
      docker run -d --name=web2 -p 9091:80 nginx
-     docker run -d --name=web2 -p 9092:80 kharatramesh/vadapavimages:vadapav
-     docker run -d --name=web3 -p 9092:80 kharatramesh/vadapavimages:vadapav
      clear
 --------------------------------------------------------------------------------------
       docker installation for linux vm
