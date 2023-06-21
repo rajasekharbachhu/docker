@@ -49,6 +49,7 @@
      docker ps
      docker inspect c2 
      docker inspect c2 | grep -i ipaddr
+     docker inspect c2 | findstr -i ipaddr
      curl  "172.17.0.3"
      clear
      docker exec -it c1 bash
