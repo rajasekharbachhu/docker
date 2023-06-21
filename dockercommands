@@ -4,7 +4,7 @@
      docker pull mysql
      docker images
      docker ps -a
-     docker container create --name=c2 httpd
+     docker container create --name=c2 httpd  # c2 is the image name of container
      docker container create --name=c3 httpd
      docker ps -a
      docker start c1
