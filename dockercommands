@@ -81,7 +81,7 @@
      apt install bridge-utils     #LC
      brctl show                   #LC
      clear
-     docker network ls
+     docker network ls            #List docker networks
      docker inspect 6d2390c211ff
      clear
      docker network create --subnet=99.99.99.0/24 --driver=bridge net1
