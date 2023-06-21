@@ -1,4 +1,4 @@
-     docker ps
+     docker ps #shows the list of running containers
      docker images
      docker pull httpd
      docker pull mysql
@@ -6,7 +6,7 @@
      docker ps -a
      docker container create --name=c2 httpd  # c2 is the image name of container
      docker container create --name=c3 httpd
-     docker ps -a
+     docker ps -a # it will shows list of stopped and running of containers
      docker start c1
      docker ps -a
      docker start c2
