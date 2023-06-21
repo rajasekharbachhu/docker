@@ -76,10 +76,10 @@
 
      docker ps
      clear
-     ip a s
-     brctl show
-     apt install bridge-utils
-     brctl show
+     ip a s                       # LC
+     brctl show                   #LC
+     apt install bridge-utils     #LC
+     brctl show                   #LC
      clear
      docker network ls
      docker inspect 6d2390c211ff
