@@ -1,0 +1,11 @@
+What is diff b/w monolythic and microlythic applications
+VM vs Docker containers
+Docker Architecture
+Why Conatiners
+Dockerfile, Images,Docker Repositories, Containers
+Container lifecycle
+Docker Installation
+Port Mapping
+Networking - Default, Bridge (LAN Card, Veth)
+Persistent Volumes - mount/Bind, Volumes, Temporaray
+
