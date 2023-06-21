@@ -167,6 +167,5 @@
     vi 1.df
     docker build . -f 1.df  -t webserver:demo
     docker images
-    docker run -d --name=i1 -p 9099:80 webserver:semo
     docker run -d --name=i1 -p 9099:80 webserver:demo
     docker ps
