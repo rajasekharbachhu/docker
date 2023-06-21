@@ -47,7 +47,7 @@
      # find iP addresss by using grep
      # login
      docker ps
-     docker inspect c2 | less
+     docker inspect c2 
      docker inspect c2 | grep -i ipaddr
      curl  "172.17.0.3"
      clear
