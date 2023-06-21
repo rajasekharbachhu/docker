@@ -61,3 +61,89 @@
      docker run -d --name=web2 -p 9091:80 nginx
      docker run -d --name=web2 -p 9092:80 kharatramesh/vadapavimages:vadapav
      docker run -d --name=web3 -p 9092:80 kharatramesh/vadapavimages:vadapav
+--------------------------------------------------------------------------------------
+      clear
+      sudo apt-get update
+      sudo apt-get install ca-certificates curl gnupg
+      sudo install -m 0755 -d /etc/apt/keyrings
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+      sudo chmod a+r /etc/apt/keyrings/docker.gpg
+      echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      sudo apt-get update
+      sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+     docker ps
+     clear
+     ip a s
+     brctl show
+     apt install bridge-utils
+     brctl show
+     clear
+     docker network ls
+     docker inspect 6d2390c211ff
+     clear
+     docker network create --subnet=99.99.99.0/24 --driver=bridge net1
+     docker network ls
+     docker inspect 9b694deffcf8
+     clear
+     docker run -d --name=n1 --network net1 --ip=99.99.99.2 --cpu="0.0000001" --memory=18M --hostname=net1.samosa.com -p 9090:80 httpd
+     docker run -d --name=n1 --network net1 --ip=99.99.99.2 --cpus="0.0000001" --memory=18M --hostname=net1.samosa.com -p 9090:80 httpd
+     docker ps
+     brctl show
+     ip a s
+     docker run -d --name=n2 --network net1 --ip=99.99.99.3 --cpus="0.0000001" --memory=18M --hostname=net2.samosa.com -p 9091:80 httpd
+     brctl show
+     ip a s
+     docker run -d --name=c1 httpd
+     ip a s
+     brctl show
+     docker ps
+     docker inpsect c1 | grep -i ipaddr
+     docker inspect c1 | grep -i ipaddr
+     docker inspect n1 | grep -i ipaddr
+     docker inspect n2 | grep -i ipaddr
+     docker exec -it c1 bash
+     docker run -d --name=c2 httpd
+     docker inspect c2 | grep -i ipaddr
+     docker exec -it c1 bash
+
+     docker volume create v1
+     docker volume ls
+     docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql
+
+     mkdir -p /data
+     cd /data/
+     echo "I like Idli So Much..." > index.html
+     ls
+     docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx
+     ls
+     echo "I like GulabJamun" > index.html
+     docker rm -f v1
+     docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx
+     echo "I like GulabJamun100" > index.html
+     clear
+
+     docker volume ls
+     docker volume create v1
+     docker volume ls
+     docker run -d --name=db1 -v v1:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 mysql
+     docker ps
+     docker exec -it db1 bash
+
+
+     docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql
+     docker ps
+     docker exec -it db1 bash
+     clear
+
+     docker volume ls
+     docker ps
+
+     docker rm -f db1
+     docker volume ls
+     docker run -d --name=db2 -v v1:/var/lib/mysql -p 3309:3306 -e MYSQL_ROOT_PASSWORD=123 mysql
+     docker ps -a
+     docker exec -it db2 bash
+
+     docker run -d --name=t1 --tmpfs /samosa httpd
