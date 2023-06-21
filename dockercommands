@@ -33,7 +33,7 @@
      docker stop c4
      docker rm c4
      docker ps -a
-     docker rm -f c3
+     docker rm -f c3    # rm is used to delete a container but before using these command sure container should not be in running.
      docker rm -f c2
      docker stop c1
      docker rm c1
