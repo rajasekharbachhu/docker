@@ -147,3 +147,26 @@
      docker exec -it db2 bash
 
      docker run -d --name=t1 --tmpfs /samosa httpd
+
+     mkdir /dockerfiles
+     cd /dockerfiles/
+     ls
+     touch 1.df one.dockerfile dockerfile
+     ls
+     vi 1.df
+     cat 1.df
+     touch 1.tar 1.txt index.html
+     echo "Working with Dockerfiles" > index.html
+     docker build . -f 1.df  -t webserver:demo
+     vi 1.df
+    docker build . -f 1.df  -t webserver:demo
+    vi 1.df
+    docker build . -f 1.df  -t webserver:demo
+    vi 1.df
+    docker build . -f 1.df  -t webserver:demo
+    vi 1.df
+    docker build . -f 1.df  -t webserver:demo
+    docker images
+    docker run -d --name=i1 -p 9099:80 webserver:semo
+    docker run -d --name=i1 -p 9099:80 webserver:demo
+    docker ps
