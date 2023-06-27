@@ -1,5 +1,6 @@
      sudo -i
      hostnamectl set-hostname master
+     bash
      bashapt update -y
      apt-get install ca-certificates curl gnupg
      sudo install -m 0755 -d /etc/apt/keyrings
