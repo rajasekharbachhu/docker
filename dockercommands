@@ -66,9 +66,10 @@
      docker inspect c2 | findstr -i ipaddr #for windows machines
      curl  "172.17.0.3" #Linux VM
      clear
-     docker exec -it c1 bash
      docker exec -it c2 bash
-     cure 172.17.0.3
+     cd htdocs/
+     cat index.html
+     exit
      curl 172.17.0.3
      docker run -d --name=web1 -p 9090:80  httpd
      docker ps
