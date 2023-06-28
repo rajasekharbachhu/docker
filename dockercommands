@@ -110,9 +110,6 @@
 
      #Docker Volumes
 
-     docker volume create v1 
-     docker volume ls
-     docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql
 
      mkdir -p /data
      cd /data/
@@ -130,20 +127,12 @@
 
      docker volume ls # list volumes
      docker volume create v1   #create volumes
-     docker volume ls
-     docker run -d --name=db1 -v v1:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 mysql
-     docker ps
-     docker exec -it db1 bash
-
-
      docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql
      docker ps
-     docker exec -it db1 bash
+     docker exec -it db1 bash #lofin into db container
      clear
-
      docker volume ls
      docker ps
-
      docker rm -f db1
      docker volume ls
      docker run -d --name=db2 -v v1:/var/lib/mysql -p 3309:3306 -e MYSQL_ROOT_PASSWORD=123 mysql
