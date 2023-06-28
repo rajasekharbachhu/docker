@@ -178,7 +178,9 @@ CMD ["httpd","-D","FOREGROUND"]
  docker images
  docker run -d --name=i1 -p 9099:80 webserver:demo
  docker ps
--------------------------------------------------------------------------------
+
+ Sesion -3
+ #Docker Compose Installtion
  curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
  chmod a+x /usr/local/bin/docker-compose
  docker-compose
