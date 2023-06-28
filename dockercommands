@@ -85,7 +85,8 @@
      docker network ls
      docker inspect 9b694deffcf8
      clear
-     docker run -d --name=n1 --network net1 --ip=99.99.99.2 --cpu="0.0000001" --memory=18M --hostname=net1.samosa.com -p 9090:80 httpd
+     docker run -d --name=n1 --network net1 --ip=99.99.99.2 --cpu="0.0000001" --memory=18M --hostname=net1.samosa.com -p 9090:80 httpd 
+     # net1 - name of the container, ip - ican assign ip adress of container of my choice
      docker run -d --name=n1 --network net1 --ip=99.99.99.2 --cpus="0.0000001" --memory=18M --hostname=net1.samosa.com -p 9090:80 httpd
      docker ps
      brctl show
