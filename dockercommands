@@ -78,7 +78,8 @@
      clear
 
      (Session -2)
-     
+
+     #Docker Networking
      docker network ls            #List docker networks
      docker inspect 6d2390c211ff #bridge nw id
      clear
@@ -106,6 +107,8 @@
      docker run -d --name=c2 httpd
      docker inspect c2 | grep -i ipaddr
      docker exec -it c1 bash
+
+     #Docker Volumes
 
      docker volume create v1
      docker volume ls
