@@ -123,6 +123,8 @@
      echo "I like GulabJamun100" > index.html
      clear
 
+     #docker volumes
+
      docker volume ls
      docker volume create v1
      docker volume ls
