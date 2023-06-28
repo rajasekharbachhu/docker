@@ -124,7 +124,7 @@
      docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx
      echo "I like GulabJamun100" > index.html
      clear
-     docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql  #create mysql container
+     docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql  #create mysql container, v1 is the docker volume
      docker ps
      docker exec -it db1 bash #lofin into db container
      clear
