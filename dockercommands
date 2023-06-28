@@ -77,6 +77,7 @@
      docker run -d --name=web2 -p 9091:80 nginx
      clear
 
+     (Session -2)
      
      docker network ls            #List docker networks
      docker inspect 6d2390c211ff #bridge nw id
