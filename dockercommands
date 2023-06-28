@@ -109,8 +109,8 @@
      docker exec -it c1 bash
 
      #Docker Volumes
-
-
+     docker volume ls # list volumes
+     docker volume create v1   #create volumes
      mkdir -p /data
      cd /data/
      echo "I like Idli So Much..." > index.html #go index.html page and change code
@@ -124,10 +124,7 @@
      docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx
      echo "I like GulabJamun100" > index.html
      clear
-
-     docker volume ls # list volumes
-     docker volume create v1   #create volumes
-     docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql
+     docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql  #create mysql container
      docker ps
      docker exec -it db1 bash #lofin into db container
      clear
