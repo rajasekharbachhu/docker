@@ -171,21 +171,13 @@ ENV dish=samosa
 CMD ["httpd","-D","FOREGROUND"]
 
 ---------------------------------------------------------------------------------------------------------
-     cat 1.df
-     touch 1.tar 1.txt index.html
-     echo "Working with Dockerfiles" > index.html
-     docker build . -f 1.df  -t webserver:demo
-     vi 1.df
-    docker build . -f 1.df  -t webserver:demo
-    vi 1.df
-    docker build . -f 1.df  -t webserver:demo
-    vi 1.df
-    docker build . -f 1.df  -t webserver:demo
-    vi 1.df
-    docker build . -f 1.df  -t webserver:demo
-    docker images
-    docker run -d --name=i1 -p 9099:80 webserver:demo
-    docker ps
+ cat 1.df
+ touch 1.tar 1.txt index.html
+ echo "Working with Dockerfiles" > index.html
+ docker build . -f 1.df  -t webserver:demo
+ docker images
+ docker run -d --name=i1 -p 9099:80 webserver:demo
+ docker ps
 -------------------------------------------------------------------------------
  curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
  chmod a+x /usr/local/bin/docker-compose
