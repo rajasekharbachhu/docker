@@ -110,7 +110,7 @@
 
      #Docker Volumes
 
-     docker volume create v1
+     docker volume create v1 
      docker volume ls
      docker run -d --name=db1 -v v1:/var/lib/mysql -v /data:/data -p 9096:80 -e MYSQL_ROOT_PASSWORD=123 mysql
 
@@ -118,15 +118,14 @@
      cd /data/
      echo "I like Idli So Much..." > index.html
      ls
-     docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx
+     docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx   # -v /data:/usr/share/nginx/html folder of the container
      ls
      echo "I like GulabJamun" > index.html
-     docker rm -f v1
+     #copy vm ip adress and poaste in browser
+     docker rm -f v1        # delete container and copy vm ip adress and poaste in browser, see you will not see msg
      docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx
      echo "I like GulabJamun100" > index.html
      clear
-
-     #docker volumes
 
      docker volume ls
      docker volume create v1
