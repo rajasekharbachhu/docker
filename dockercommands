@@ -117,19 +117,19 @@
      mkdir -p /data
      cd /data/
      echo "I like Idli So Much..." > index.html #go index.html page and change code
-     http://13.90.98.27:9094 # 13.90.98.27 -VM id adresss
      ls
      docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx   # -v /data:/usr/share/nginx/html folder of the container
+     http://13.90.98.27:9094 # 13.90.98.27 -VM id adresss
      ls
      echo "I like GulabJamun" > index.html
-     #copy vm ip adress and poaste in browser
+     http://13.90.98.27:9094 # 13.90.98.27 -VM id adresss
      docker rm -f v1        # delete container and copy vm ip adress and poaste in browser, see you will not see msg
      docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx
      echo "I like GulabJamun100" > index.html
      clear
 
-     docker volume ls
-     docker volume create v1
+     docker volume ls # list volumes
+     docker volume create v1   #create volumes
      docker volume ls
      docker run -d --name=db1 -v v1:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 mysql
      docker ps
