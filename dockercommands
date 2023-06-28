@@ -116,7 +116,7 @@
 
      mkdir -p /data
      cd /data/
-     echo "I like Idli So Much..." > index.html
+     echo "I like Idli So Much..." > index.html #go index.html page and change code
      ls
      docker run -d --name=v1 -v /data:/usr/share/nginx/html -p 9094:80 nginx   # -v /data:/usr/share/nginx/html folder of the container
      ls
