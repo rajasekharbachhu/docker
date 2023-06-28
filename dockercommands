@@ -77,15 +77,9 @@
      docker run -d --name=web2 -p 9091:80 nginx
      clear
 
-     docker ps
-     clear
-     ip a s                       # LC
-     brctl show                   #LC
-     apt install bridge-utils     #LC
-     brctl show                   #LC
-     clear
+     
      docker network ls            #List docker networks
-     docker inspect 6d2390c211ff
+     docker inspect 6d2390c211ff #bridge nw id
      clear
      docker network create --subnet=99.99.99.0/24 --driver=bridge net1
      docker network ls
