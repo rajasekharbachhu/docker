@@ -64,13 +64,13 @@
      docker inspect c2 
      docker inspect c2 | grep -i ipaddr  #for linux machines
      docker inspect c2 | findstr -i ipaddr #for windows machines
-     curl  "172.17.0.3" #Linux VM
+     curl  "172.17.0.3" #bash
      clear
      docker exec -it c2 bash
      cd htdocs/
      cat index.html
      exit
-     curl 172.17.0.3
+     curl 172.17.0.3 #ip adress of container
      docker run -d --name=web1 -p 9090:80  httpd   # docker port mapping
      docker ps
      docker run -d --name=web1 -p 9091:80 nginx
